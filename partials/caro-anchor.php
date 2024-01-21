@@ -1,0 +1,1 @@
+<span id="anchor-<?= $args['id'] ?>" class="absolute <?= $args['offset'] ?? "top-[-15rem]" ?> opacity-0 pointer-events-none "></span>

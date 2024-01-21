@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ink-components/case-two-column",
+  "version": "0.1.0",
+  "title": "Case Two column",
+  "category": "design",
+  "icon": "smiley",
+  "description": "Example block scaffolded with Create Block tool.",
+  "example": {},
+  "supports": {
+    "html": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "col1": {
+      "type": "object",
+      "default": {
+        "title": "",
+        "content": ""
+      }
+    },
+    "col2": {
+      "type": "object",
+      "default": {
+        "title": "",
+        "content": ""
+      }
+    },
+    "anchor": {
+      "type": "string",
+      "default": "#"
+    }
+  },
+  "textdomain": "case-two-column",
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}

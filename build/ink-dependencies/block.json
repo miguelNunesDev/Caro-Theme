@@ -1,0 +1,20 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ink-components/ink-dependencies",
+  "version": "0.1.0",
+  "title": "Ink dependencies",
+  "category": "design",
+  "icon": "smiley",
+  "description": "Do not erase",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "ink-dependencies",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:../index.css",
+  "style": "file:../index.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}

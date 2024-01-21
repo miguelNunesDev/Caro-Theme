@@ -1,0 +1,46 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ink-components/profile-details",
+	"version": "0.1.0",
+	"title": "Profile Details",
+	"category": "design",
+	"icon": "smiley",
+	"description": "Example block scaffolded with Create Block tool.",
+	"example": {},
+	"supports": {
+		"html": true
+	},
+	"attributes": {
+		"education": {
+			"type": "array",
+			"default": [{ "title": "Title", "content": "Graduated in X" }]
+		},
+		"skills": {
+			"type": "array",
+			"default": ["skill"]
+		},
+		"tools": {
+			"type": "array",
+            "default": []
+		},
+		"languages": {
+			"type": "array",
+			"default": [{ "name": "Spanish", "level": "Beginner" }]
+		},
+		"experience": {
+			"type": "array",
+			"default": [
+				{
+					"title": "Designer",
+					"comany": "Company Name",
+					"details": "details"
+				}
+			]
+		}
+	},
+	"textdomain": "profile-details",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}

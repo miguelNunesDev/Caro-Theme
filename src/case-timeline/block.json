@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ink-components/case-timeline",
+	"version": "0.1.0",
+	"title": "Case Timeline",
+	"category": "design",
+	"icon": "smiley",
+	"description": "Example block scaffolded with Create Block tool.",
+	"example": {},
+	"supports": {
+		"html": true
+	},
+	"attributes": {
+		"desktop": {
+			"type": "object",
+			"default": { "id": 0, "src": "" }
+		},
+		"mobile": {
+			"type": "object",
+			"default": { "id": 0, "src": "" }
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"anchor": {
+			"type": "string",
+			"default": "#"
+		}
+	},
+	"textdomain": "case-timeline",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}

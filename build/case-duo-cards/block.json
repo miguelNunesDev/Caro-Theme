@@ -1,0 +1,62 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ink-components/case-duo-cards",
+  "version": "0.1.0",
+  "title": "Case Duo Cards",
+  "category": "design",
+  "icon": "smiley",
+  "description": "Example block scaffolded with Create Block tool.",
+  "example": {},
+  "supports": {
+    "html": true
+  },
+  "attributes": {
+    "card1": {
+      "type": "object",
+      "default": {
+        "title": "card title",
+        "name": "Name",
+        "content": "Content",
+        "details": [
+          {
+            "title": "title",
+            "content": "content"
+          }
+        ],
+        "img": {
+          "id": 0,
+          "src": ""
+        },
+        "keywords": [
+          "keywords"
+        ]
+      }
+    },
+    "card2": {
+      "type": "object",
+      "default": {
+        "title": "card title",
+        "name": "Name",
+        "content": "Content",
+        "details": [
+          {
+            "title": "title",
+            "content": "content"
+          }
+        ],
+        "img": {
+          "id": 0,
+          "src": ""
+        },
+        "keywords": [
+          "keywords"
+        ]
+      }
+    }
+  },
+  "textdomain": "case-duo-cards",
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}

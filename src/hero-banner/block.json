@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ink-components/hero-banner",
+	"version": "0.1.0",
+	"title": "Hero Banner",
+	"category": "design",
+	"icon": "smiley",
+	"description": "Example block scaffolded with Create Block tool.",
+	"example": {},
+	"supports": {
+		"html": true
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "title"
+		},
+		"content": {
+			"type": "string",
+			"default": "content"
+		},
+		"rotators": {
+			"type": "array",
+			"default": ["Hello"]
+		},
+		"socials": {
+			"type": "array",
+			"default": [
+				{
+					"icon": "icon.jpg",
+					"url": "google.com",
+                    "text": "/social"
+				}
+			]
+		}
+	},
+	"textdomain": "hero-banner",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}

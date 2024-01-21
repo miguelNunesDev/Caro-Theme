@@ -1,0 +1,1 @@
+<small class="<?= array_key_exists('class', $args) ? $args['class'] : '' ?> rounded-[3.6rem] text-[1.2rem] text-[#C4C3C2] font-open-sans tracking-[-0.04em] px-[1rem] py-[.6rem] bg-[#535150] "><?= $args['text'] ?></small>

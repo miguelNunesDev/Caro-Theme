@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ink-components/profile-colunm",
+  "version": "0.1.0",
+  "title": "Profile column",
+  "category": "design",
+  "icon": "smiley",
+  "description": "Example block scaffolded with Create Block tool.",
+  "example": {},
+  "supports": {
+    "html": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "title"
+    },
+    "content": {
+      "type": "string",
+      "default": "content"
+    },
+    "image": {
+      "type": "string"
+    }
+  },
+  "textdomain": "profile-colunm",
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}

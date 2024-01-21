@@ -1,0 +1,32 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ink-components/case-card-slider",
+	"version": "0.1.0",
+	"title": "Case card slider",
+	"category": "design",
+	"icon": "smiley",
+	"description": "Example block scaffolded with Create Block tool.",
+	"example": {},
+	"supports": {
+		"html": true
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": ".Desgin thinking process"
+		},
+		"workflows": {
+			"type": "array",
+			"default": [{ "title": "title", "content": "lorem ipsum" }]
+		},
+        "anchor": {
+            "type":"string",
+            "default": "#"
+        }
+	},
+	"textdomain": "case-card-slider",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ink-components/case-banner",
+  "version": "0.1.0",
+  "title": "Case study banner",
+  "category": "design",
+  "icon": "smiley",
+  "description": "Example block scaffolded with Create Block tool.",
+  "example": {},
+  "supports": {
+    "html": true
+  },
+  "attributes": {
+    "tools": {
+      "type": "array",
+      "default": [
+        ""
+      ]
+    },
+    "bg": {
+      "type": "object",
+      "default": {}
+    },
+    "menu": {
+      "type": "array",
+      "default": [
+        {
+          "text": "",
+          "url": ""
+        }
+      ]
+    }
+  },
+  "textdomain": "case-banner",
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ink-components/case-overview",
+  "version": "0.1.0",
+  "title": "Case overview",
+  "category": "design",
+  "icon": "smiley",
+  "description": "Example block scaffolded with Create Block tool.",
+  "example": {},
+  "supports": {
+    "html": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "content": {
+      "type": "string",
+      "default": ""
+    },
+    "img": {
+      "type": "object",
+      "default": {}
+    },
+    "details": {
+      "type": "array",
+      "default": []
+    },
+    "anchor": {
+      "type": "string",
+      "default": "#"
+    }
+  },
+  "textdomain": "case-overview",
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}

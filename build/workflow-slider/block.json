@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ink-components/workflow-slider",
+  "version": "0.1.0",
+  "title": "Workflow Slider card",
+  "category": "design",
+  "icon": "smiley",
+  "description": "Example block scaffolded with Create Block tool.",
+  "example": {},
+  "supports": {
+    "html": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ".Workflow to make the work flow"
+    },
+    "workflows": {
+      "type": "array",
+      "default": [
+        {
+          "title": "title",
+          "content": "lorem ipsum"
+        }
+      ]
+    }
+  },
+  "textdomain": "workflow-slider",
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}

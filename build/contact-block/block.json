@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ink-components/contact-block",
+  "version": "0.1.0",
+  "title": "Contact block",
+  "category": "design",
+  "icon": "smiley",
+  "description": "Example block scaffolded with Create Block tool.",
+  "example": {},
+  "supports": {
+    "html": true
+  },
+  "attributes": {
+    "rotators": {
+      "type": "array",
+      "default": [
+        "hola",
+        "hi"
+      ]
+    },
+    "socials": {
+      "type": "array",
+      "default": [
+        {
+          "icon": "",
+          "text": "",
+          "link": ""
+        }
+      ]
+    },
+    "title": {
+      "type": "string",
+      "default": "It all starts here. Say hi"
+    }
+  },
+  "textdomain": "contact-block",
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}
