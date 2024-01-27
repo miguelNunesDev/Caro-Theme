@@ -6,7 +6,7 @@ import { Panel, PanelBody, TextControl } from '@wordpress/components';
 import ServerSideRender from '@wordpress/server-side-render';
 import block from './block.json';
 import { SortableBlock } from '../../js/modules/Sortables';
-import { ToolsControl } from '../profile-details/components/ToolsControl';
+import { ToolsControl } from './components/ToolsControl';
 
 export default function Edit({ attributes, setAttributes }) {
 	const { imgs, anchor } = attributes;

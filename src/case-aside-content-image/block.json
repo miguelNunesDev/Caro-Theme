@@ -1,0 +1,40 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ink-components/case-aside-content-image",
+	"version": "0.1.0",
+	"title": "Case aside Content Image",
+	"category": "design",
+	"icon": "smiley",
+	"description": "Example block scaffolded with Create Block tool.",
+	"example": {},
+	"supports": {
+		"html": true
+	},
+	"attributes": {
+		"thumbnail": {
+			"type": "object",
+			"default": {}
+		},
+		"title": {
+			"type": "string",
+			"default": "Title"
+		},
+        "subtitle": {
+			"type": "string",
+			"default": "Subtitle"
+		},
+		"content": {
+			"type": "string",
+			"default": "Enter text"
+		},
+		"anchor": {
+			"type": "string",
+			"default": "#"
+		}
+	},
+	"textdomain": "case-aside-content-image",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}

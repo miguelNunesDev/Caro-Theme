@@ -1,5 +1,5 @@
 <?php
-$h3 = "text-raleway text-white font-semibold pb-[.8rem] text-[4.8rem] md:text-[2.3rem] leading-[1.21em] tracking-[-0.04em]";
+$h3 = "text-raleway text-white font-semibold pb-[.8rem] text-[2.3rem] leading-[1.21em] tracking-[-0.04em]";
 $p = "text-content"
 ?>
 <section id="case-two-column" class="mx-auto text-white container-block px-[8.33%] flex flex-wrap py-[6.4rem] md:py-[12.8rem] items-start relative" <?= get_block_wrapper_attributes(); ?>>

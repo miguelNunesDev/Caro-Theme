@@ -18,6 +18,7 @@ export const KeywordsControl = SortableElement(
 		};
 
 		const handleTextChange = (val, i) => {
+			console.log({ items, i });
 			const newItems = [...items];
 			newItems[i] = val;
 			console.log('on change');

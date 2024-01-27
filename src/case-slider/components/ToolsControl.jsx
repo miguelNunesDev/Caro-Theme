@@ -13,6 +13,13 @@ export const ToolsControl = SortableElement(
 				setAttributes({ [name]: newItems });
 			}
 		};
+		const handleRemoveRotator = (i) => {
+			const newItems = [...items];
+			newItems.splice(i, 1);
+			setAttributes({
+				[name]: newItems,
+			});
+		};
 
 		return (
 			<Flex>
@@ -26,20 +33,22 @@ export const ToolsControl = SortableElement(
 						render={({ open }) => (
 							<Button onClick={open}>
 								{value ? (
-									<img
-										style={{
-											objectFit: 'cover',
-										}}
-										src={value}
-									/>
+									<img src={value} />
 								) : (
-									'click here'
+									'Select new Media'
 								)}
 							</Button>
 						)}
 					/>
 				</FlexItem>
-				<FlexItem>{value ? 'Change Icon' : 'Select new Icon'}</FlexItem>
+				<FlexItem>
+					<Button
+						variant='secondary'
+						onClick={(e) => handleRemoveRotator(sortIndex)}
+					>
+						-
+					</Button>
+				</FlexItem>
 			</Flex>
 		);
 	}

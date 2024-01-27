@@ -47,7 +47,7 @@ if ($related_query->have_posts()) : ?>
                     $related_query->the_post();
                     $divide = strlen(get_post_meta(get_the_ID(), 'case_title', true)) < 20 ? 'columns-2' : '';
                 ?>
-                    <article class="img-box swiper-slide px-[.8rem] md:max-w-none max-w-[64vw]">
+                    <article class="img-box swiper-slide px-[.8rem] md:max-w-none max-w-[64vw] comp-<?= get_post_field('post_name', get_the_ID()) ?>">
                         <div class="<?= $card ?>" style="<?= $gradient ?>">
 
                             <header class="pt-[6.4rem] px-[3.2rem] md:px-[6.4rem]">
@@ -58,7 +58,7 @@ if ($related_query->have_posts()) : ?>
                                 <p class="pt-[.8rem] text-[#D2D1D0] text-real-text text-[1.8rem] leading-[1.2em] font-normal"><?= get_the_title(); ?></p>
                             </header>
 
-                            <div class=" py-[2.4rem] md:pt-[2.4rem] md:pb-[4.4rem] px-[3.2rem] md:px-[6.4rem] md:flex md:flex-wrap gap-[2.4rem]">
+                            <div class=" py-[2.4rem] md:pt-[2.4rem] md:pb-[4.4rem] px-0 md:px-[6.4rem] max-md:items-center max-md:justify-center flex md:flex-wrap gap-[1rem] md:gap-[2.4rem]">
                                 <?php get_template_part('partials/caro', 'bttn', array(
                                     'text' => 'Take a peek',
                                     'link' => get_permalink(),
@@ -69,7 +69,7 @@ if ($related_query->have_posts()) : ?>
                                     <?php get_template_part('partials/caro', 'bttn', array(
                                         'text' => 'Live App',
                                         'link' => get_post_meta(get_the_ID(), 'case_link', true),
-                                        'class' => 'bttn-line inline-block mt-[1.2rem] md:mt-0'
+                                        'class' => 'bttn-line inline-block'
                                     )); ?>
                                 <?php endif; ?>
                             </div>

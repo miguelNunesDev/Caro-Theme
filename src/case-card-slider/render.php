@@ -21,7 +21,7 @@
                         $card = "flex flex-col w-[53.2rem] p-[3.2rem] md:p-[6.4rem]  overflow-hidden rounded-[1.2rem] border border-[#535150]";
                         $gradient = "background: linear-gradient(74deg, rgba(34, 30, 30, 0.50) 21.29%, rgba(83, 81, 80, 0.50) 80.09%)";
                         foreach ($attributes['workflows'] as $workflow) : ?>
-                            <div class="h-[35rem] flex items-center swiper-slide backdrop-blur-md <?= $card ?>" style="<?= $gradient ?>">
+                            <div class="flex items-center swiper-slide backdrop-blur-md <?= $card ?>" style="heigth:auto; <?= $gradient ?>">
                                 <header class="text-left pb-[2.4rem] md:pb-[3rem]">
                                     <h3 class="font-raleway max-md:pb-[2.4rem] font-extrabold text-[4.8rem] md:text-[3.9rem] leading-[1.2em] tracking-[-0.04]"><?= $workflow['title'] ?></h3>
                                 </header>

@@ -46,6 +46,9 @@ function ink_components_block_init()
     register_block_type(get_template_directory() . '/build/case-two-column');
     register_block_type(get_template_directory() . '/build/case-summary');
     register_block_type(get_template_directory() . '/build/case-duo-cards');
+    register_block_type(get_template_directory() . '/build/case-row-text-img');
+    register_block_type(get_template_directory() . '/build/case-aside-content-image');
+    register_block_type(get_template_directory() . '/build/case-responsive-title-image');
 }
 
 add_action('init', 'ink_components_block_init');

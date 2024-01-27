@@ -1,11 +1,11 @@
 
-<section id="case-aside-banner" class="flex flex-wrap relative" <?= get_block_wrapper_attributes(); ?>>
+<section id="case-aside-banner" class="relative flex flex-wrap" <?= get_block_wrapper_attributes(); ?>>
     <?php get_template_part('partials/caro', 'anchor', array(
         'id' => $attributes['anchor'],
     )); ?>
     <aside class="md:basis-7/12 w-full img-cover h-[53.4rem] md:h-[62.8rem]">
         <?php if (wp_attachment_is('video', $attributes['thumbnail']['id'])) : ?>
-            <video src="<?= $attributes['thumbnail']['src'] ?>" muted autoplay loop></video>
+            <video style="height: 100%;" src="<?= $attributes['thumbnail']['src'] ?>" muted autoplay loop></video>
         <?php else : ?>
             <img src="<?= $attributes['thumbnail']['src'] ?>" alt="">
         <?php endif; ?>

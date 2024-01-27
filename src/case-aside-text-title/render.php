@@ -17,7 +17,7 @@
     <header class="md:basis-1/2 pb-[2.8rem] md:pb-0">
         <h2 class="font-raleway leading-[1.2em] text-[4.8rem] md:text-[7.2rem] tracking-[-0.24rem] font-bold"><?= $attributes['title'] ?></h2>
     </header>
-    <article class="md:basis-6/12">
-        <p class="text-content"><?= $attributes['content'] ?></p>
+    <article class="md:basis-6/12 text-content">
+        <p><?= $attributes['content'] ?></p>
     </article>
 </section>

@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ink-components/case-row-text-img",
+	"version": "0.1.0",
+	"title": "Case Row Text Image",
+	"category": "design",
+	"icon": "smiley",
+	"description": "Example block scaffolded with Create Block tool.",
+	"example": {},
+	"supports": {
+		"html": true
+	},
+	"attributes": {
+		"imgs": {
+			"type": "array",
+			"default": [{ "id": 0, "src": "a", "content": "" }]
+		},
+		"anchor": {
+			"type": "string",
+			"default": "#"
+		}
+	},
+	"textdomain": "case-row-text-img",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}

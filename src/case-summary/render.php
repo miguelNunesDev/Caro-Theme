@@ -15,7 +15,7 @@ $b = "text-open-sans text-[1.6rem] font-bold leading-[1.18em]";
             </header>
             <article class="flex flex-wrap gap-x-[1.6rem] md:basis-6/12">
                 <!-- Desktop Tools When Base in -->
-                <div class="basis-1/2 hidden md:block">
+                <div class="hidden basis-1/2 md:block">
                     <div>
                         <h3 class="<?= $h3 ?>">Tools</h3>
                         <ul class="flex flex-wrap pt-[1.6rem] gap-[1.3rem]">
@@ -71,15 +71,17 @@ $b = "text-open-sans text-[1.6rem] font-bold leading-[1.18em]";
 
                     <!-- Links -->
                     <div class="w-full pt-[5.2rem]">
-                        <h3 class="<?= $h3 ?>">Links</h3>
-                        <ul class="flex flex-wrap pt-[1.6rem] gap-[1.3rem]">
-                            <?php foreach ($attributes['links'] as $link) : ?>
-                                <li class="w-full">
-                                    <strong class="<?= $b ?>"><?= $link['name'] ?></strong>
-                                    <a class="transition duration-300 hover:opacity-50 pl-[.1rem] <?= $p ?>" href=" <?= $link['url'] ?>" target="_blank"> <?= $link['url'] ?></a>
-                                </li>
-                            <?php endforeach; ?>
-                        </ul>
+                        <?php if (!$attributes['links']) : ?>
+                            <h3 class="<?= $h3 ?>">Links</h3>
+                            <ul class="flex flex-wrap pt-[1.6rem] gap-[1.3rem]">
+                                <?php foreach ($attributes['links'] as $link) : ?>
+                                    <li class="w-full">
+                                        <strong class="<?= $b ?>"><?= $link['name'] ?></strong>
+                                        <a class="transition duration-300 hover:opacity-50 pl-[.1rem] <?= $p ?>" href=" <?= $link['url'] ?>" target="_blank"> <?= $link['url'] ?></a>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="w-full pt-[5.2rem]">

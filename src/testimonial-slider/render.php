@@ -33,6 +33,7 @@
     <section id="testimonies" class="max-md:overflow-hidden relative pt-[7.4rem] pb-[12rem] isolate">
         <?php get_template_part('partials/caro', 'anchor', array(
             'id' => 'testimonies',
+            'offset' => 'top-0'
         )); ?>
         <aside class="absolute w-full inset-inline-0 z-[-1] top-[-15rem] overflow-hidden max-h-[135rem]">
             <svg class="w-full mx-auto h-[120rem] px-[15rem] pt-[15rem]">
@@ -48,9 +49,9 @@
         </aside>
         <div class="justify-between mx-auto text-white container-block">
             <div class="flex flex-wrap md:px-[8.3%] justify-between">
-                <header class="md:basis-5/12 flex flex-col justify-center items-start">
+                <header class="flex flex-col items-start justify-center md:basis-5/12">
                     <?php get_template_part('partials/caro', 'pill', array(
-                        'text' => 'Case Study'
+                        'text' => 'Testimonies'
                     )); ?>
                     <h2 class="font-raleway font-bold text-[4.8rem] md:text-[10em] leading-[1em] tracking-[-0.04em] mt-[3.2rem]">
                         <?= $attributes['title'] ?>

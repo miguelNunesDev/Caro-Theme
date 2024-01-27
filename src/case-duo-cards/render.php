@@ -12,7 +12,7 @@
         <div class="absolute inset-0 backdrop-blur-3xl"></div>
     </aside>
 
-    <section id="case-duo-cards" class="mx-auto max-md:flex-wrap text-white container-block flex gap-[3.2rem] px-[6.5%] pt-[10rem] pb-[12.8rem] relative">
+    <section id="case-duo-cards" class="mx-auto max-md:flex-wrap text-white container-block flex gap-[3.2rem] px-[6.5%] pt-[10rem] relative">
 
 
         <?php get_template_part('partials/duo', 'card', array(

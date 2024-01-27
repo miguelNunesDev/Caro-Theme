@@ -80,12 +80,12 @@ $menu_lg = 'flex flex-wrap lg:justify-between align-middle
         <?php foreach ($attributes['previewItems'] as $id) :
             $post = get_post($id);
             $post_type_slug = $post->post_name; ?>
-            <article id="<?= $post_type_slug ?>" class="md:px-[8.3%] mt-[12rem] md:mt-[15.5rem] relative">
+            <article id="<?= $post_type_slug ?>" class="md:px-[8.3%] mt-[12rem] md:mt-[15.5rem] relative comp-<?= get_post_field('post_name', $id) ?>">
                 <?php get_template_part('partials/caro', 'anchor', array(
                     'id' => $post_type_slug,
                 )); ?>
             
-                <div class="md:px-[8.3%] flex flex-wrap justify-between h-full pb-[5.6rem] md:pb-[4.8rem]">
+                <div class="md:px-[8.3%] flex flex-wrap justify-between h-full last:pb-0 pb-[5.6rem] md:pb-[4.8rem]">
                     <header class="md:basis-1/2 text-white mb-[3.4rem] pr-[8.3%]">
                         <?php get_template_part('partials/caro', 'pill', array(
                             'text' => 'Case Study'
@@ -113,7 +113,7 @@ $menu_lg = 'flex flex-wrap lg:justify-between align-middle
                         </div>
                     </aside>
                 </div>
-                <div class="relative isolate h-[42.8rem] md:h-[34rem] overflow-hidden rounded-[1.2rem] mobile-full-width ">
+                <div class="relative isolate h-[42.8rem] md:h-[34rem] overflow-hidden md:rounded-[1.2rem] mobile-full-width ">
                     <figure class="max-md:w-full max-lg:h-full absolute inset-0 z-[-1] img-box drop-shadow-md">
                         <img class="mobile-cover" src="<?= wp_get_attachment_image_url(get_post_meta($id, 'case_background', true), 'full') ?>" alt="">
                     </figure>

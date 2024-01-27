@@ -14,7 +14,7 @@ $small = 'font-open-sans font-light text-[1.4rem] leading-[1.21em] text-white pt
     <section id="profile-details" class="mx-auto mb-[16rem] md:mb-[12.8rem] mt-[9.4rem]  container-block flex flex-wrap text-white relative md:px-[8.3%] justify-between isolate">
 
         <aside class="absolute w-full inset-inline-0 z-[-1] top-[-55rem]">
-            <svg class="w-full mx-auto h-[120rem] p-[15rem]">
+            <svg class="w-full mx-auto h-[120rem] p-[15rem] scale-75 md:scale-100">
                 <ellipse cx="652.5" cy="715" rx="364.5" ry="287" fill="#60371A" fill-opacity="0.5" />
                 <circle cx="1138" cy="327" r="209" fill="#60371A" fill-opacity="0.7" />
                 <circle cx="983" cy="118" r="118" fill="#60371A" fill-opacity="0.7" />

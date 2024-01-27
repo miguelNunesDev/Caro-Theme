@@ -1,0 +1,43 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ink-components/case-responsive-title-image",
+  "version": "0.1.0",
+  "title": "Case responsive Title Image",
+  "category": "design",
+  "icon": "smiley",
+  "description": "Example block scaffolded with Create Block tool.",
+  "example": {},
+  "supports": {
+    "html": true
+  },
+  "attributes": {
+    "desktop": {
+      "type": "object",
+      "default": {}
+    },
+    "mobile": {
+      "type": "object",
+      "default": {}
+    },
+    "height": {
+      "type": "object",
+      "default": {
+        "lg": 0,
+        "sm": 0
+      }
+    },
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "anchor": {
+      "type": "string",
+      "default": "#"
+    }
+  },
+  "textdomain": "case-responsive-title-image",
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}
