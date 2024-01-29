@@ -10,6 +10,7 @@ import { Panel, PanelBody } from '@wordpress/components';
 import ServerSideRender from '@wordpress/server-side-render';
 import block from './block.json';
 
+
 export default function Edit({ attributes, setAttributes }) {
 	const { desktop, mobile, height, title, anchor } = attributes;
 	const imageCss = {

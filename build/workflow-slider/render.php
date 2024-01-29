@@ -1,11 +1,15 @@
 <style>
+    #workflow .swiper-slide {
+        height: auto !important;
+    }
+
     @media only screen and (min-width : 0) and (max-width : 960px) {
-        #testimonies #workflow-header {
+        #workflow #workflow-header {
             order: -1;
         }
     }
 </style>
-<section id="testimonies" class="max-md:overflow-hidden relative pt-[7.4rem] pb-[15rem] md:pb-[12rem] isolate z-[1]">
+<section id="workflow" class="max-md:overflow-hidden relative pt-[7.4rem] pb-[15rem] md:pb-[12rem] isolate z-[1]">
 
     <div class="justify-between mx-auto text-white container-block">
         <div class="flex flex-wrap md:px-[8.3%] justify-between">

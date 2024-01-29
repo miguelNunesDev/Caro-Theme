@@ -1,11 +1,14 @@
 <style>
+    #case-card-slider .swiper-slide {
+        height: auto;
+    }
     @media only screen and (min-width : 0) and (max-width : 960px) {
-        #testimonies #workflow-header {
+        #case-card-slider #workflow-header {
             order: -1;
         }
     }
 </style>
-<section id="testimonies" class="max-md:overflow-hidden relative py-[7.4rem] pb-[15rem] md:py-[12.8rem] isolate z-[1]">
+<section id="case-card-slider" class="max-md:overflow-hidden relative py-[7.4rem] pb-[15rem] md:py-[12.8rem] isolate z-[1]">
 
     <div class="justify-between mx-auto text-white container-block">
         <div class="flex flex-wrap md:px-[8.3%] justify-between">

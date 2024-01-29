@@ -14,7 +14,7 @@
     }
 
     #testimonies .swiper-slide {
-        height: auto;
+        height: auto !important;
     }
 
     @media only screen and (min-width : 0) and (max-width : 960px) {
@@ -64,7 +64,7 @@
                             $card = "flex flex-col w-[53.2rem] p-[3.2rem] md:p-[6.4rem]  overflow-hidden rounded-[1.2rem] border border-[#535150]";
                             $gradient = "background: linear-gradient(74deg, rgba(34, 30, 30, 0.50) 21.29%, rgba(83, 81, 80, 0.50) 80.09%)";
                             foreach ($attributes['testimonials'] as $id) : ?>
-                                <div class="flex items-center swiper-slide backdrop-blur-md <?= $card ?> " style="<?= $gradient ?> ">
+                                <div class="flex items-center swiper-slide backdrop-blur-md <?= $card ?> " style="<?= $gradient ?>">
                                     <div class="font-raleway font-extralight text-[1.8rem] md:text-[2.8rem] tracking-[-0.02em] leading-[1.21em]">
                                         <?php
                                         $raw = get_post_field('post_content', $id);

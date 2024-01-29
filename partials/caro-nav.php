@@ -41,7 +41,9 @@
             top: 0;
 
         }
-
+        #caro-nav.open {
+            top: 0 !important;
+        }
         #caro-nav {
             position: fixed;
             top: -10rem;
@@ -66,7 +68,7 @@
                 'text' => 'CV/Resume',
                 'text-mobile' => 'Download CV/Resume',
                 'link' => wp_get_attachment_url($pdf_id),
-                'class' => 'bttn-line max-lg:block max-lg:text-center',
+                'class' => 'bttn-line max-lg:block max-lg:text-center text-[1.8rem]',
                 'target' => '_blank',
                 'download' => 'Carolina_di_Lello_Resume_2023'
             )); ?>

@@ -9,7 +9,13 @@ $title = '
 ';
 $small = 'font-open-sans font-light text-[1.4rem] leading-[1.21em] text-white pt-[.4rem]';
 ?>
-
+<style>
+    @media only screen and (min-width : 0) and (max-width : 960px) {
+        #profile-details aside.absolute {
+            width: calc(100% - 6.4rem);
+        }
+    }
+</style>
 <div <?= get_block_wrapper_attributes(); ?>>
     <section id="profile-details" class="mx-auto mb-[16rem] md:mb-[12.8rem] mt-[9.4rem]  container-block flex flex-wrap text-white relative md:px-[8.3%] justify-between isolate">
 

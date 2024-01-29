@@ -18,6 +18,9 @@
         .home #fun-projects {
             margin-bottom: 14.6rem;
         }
+        #illustration-preview aside img:first-of-type{
+            object-position: bottom;
+        }
     }
 </style>
 <section id="ilustration-preview" class="w-full mx-auto relative z-[1]" <?= get_block_wrapper_attributes(); ?> id="fun-projects">

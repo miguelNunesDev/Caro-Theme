@@ -5,8 +5,8 @@
 
     #case-aside-text-title ul li {
         margin-left: 2.3rem;
-        font-size: 1.8rem;
-        list-style: 1.2em;
+        font-size: 1.6rem;
+        line-height: 1.2em;
     }
 </style>
 

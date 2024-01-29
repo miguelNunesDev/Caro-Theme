@@ -61,7 +61,7 @@ $menu_lg = 'flex flex-wrap lg:justify-between align-middle
     </ul>
 </menu>
 
-<section id="case-study-preview" class="relative pb-[14rem]" <?= get_block_wrapper_attributes(); ?>>
+<section id="case-study-preview" class="relative lg:pb-[14rem]" <?= get_block_wrapper_attributes(); ?>>
     <!-- BG -->
     <aside class="absolute w-full inset-inline-0 z-[-1] top-1/2">
         <svg class="w-full mx-auto h-[120rem] px-[15rem] pt-[15rem]">

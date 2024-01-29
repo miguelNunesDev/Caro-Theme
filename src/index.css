@@ -96,15 +96,15 @@ html {
 html.interface-interface-skeleton__html-container {
 	font-size: 7px;
 }
-.block-editor-iframe__body,
-.block-editor-iframe__body .swiper-wrapper p {
+.edit-post-visual-editor,
+.edit-post-visual-editor .swiper-wrapper p {
 	font-size: inherit;
 	line-height: inherit;
 }
-.block-editor-iframe__body .swiper-slide:not(:first-child) {
-	display: none;
+.edit-post-visual-editor .swiper-wrapper {
+	display: flex;
 }
-.block-editor-iframe__body .block-editor-iframe__body,
+.edit-post-visual-editor,
 .editor-styles-wrapper {
 	background: #211e1f;
 }

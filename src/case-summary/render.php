@@ -71,7 +71,7 @@ $b = "text-open-sans text-[1.6rem] font-bold leading-[1.18em]";
 
                     <!-- Links -->
                     <div class="w-full pt-[5.2rem]">
-                        <?php if (!$attributes['links']) : ?>
+                        <?php if ( $attributes['links'] && !empty($attributes['links'])) : ?>
                             <h3 class="<?= $h3 ?>">Links</h3>
                             <ul class="flex flex-wrap pt-[1.6rem] gap-[1.3rem]">
                                 <?php foreach ($attributes['links'] as $link) : ?>

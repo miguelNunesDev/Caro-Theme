@@ -10,6 +10,7 @@ class ContentObserver {
 
 	animateOnVisible = (sel, selToAnimate = false) => {
 		const nodes = document.querySelectorAll(sel);
+        console.log('animateOnvisible', nodes);
 		if (!nodes.length) console.error('No nodes found', nodes);
 		cb = (el) => {
 			if (selToAnimate) {

@@ -3,7 +3,7 @@
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
-define("CARO_VERSION", 0.1);
+define("CARO_VERSION", 0.2);
 function enqueue_dependencies()
 {
     if (is_admin()) return;

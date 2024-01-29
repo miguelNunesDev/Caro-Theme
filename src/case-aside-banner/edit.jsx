@@ -1,14 +1,23 @@
 import { __ } from '@wordpress/i18n';
 import './view.js';
 
-import { Button, Flex, FlexItem, TextControl } from '@wordpress/components';
+import {
+	Panel,
+	PanelBody,
+	Button,
+	Flex,
+	FlexItem,
+	TextControl,
+	ToggleControl,
+} from '@wordpress/components';
 
 import { MediaUpload } from '@wordpress/block-editor';
 
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
-import { Panel, PanelBody } from '@wordpress/components';
 import ServerSideRender from '@wordpress/server-side-render';
 import block from './block.json';
+
+import { useEffect, useState } from 'react';
 
 export default function Edit({ attributes, setAttributes }) {
 	const { title, bttn, thumbnail, anchor } = attributes;
@@ -70,6 +79,26 @@ export default function Edit({ attributes, setAttributes }) {
 					<PanelBody title='Button' initialOpen={true}>
 						<ul>
 							<li>
+								<h2>Link Type</h2>
+								<ToggleControl
+									label={
+										bttn?.isExternal
+											? 'External Link'
+											: 'Overlay image'
+									}
+									help='Is overlay or External?'
+									checked={bttn?.isExternal}
+									onChange={(newValue) => {
+										setAttributes({
+											bttn: {
+												...bttn,
+												isExternal: newValue,
+											},
+										});
+									}}
+								/>
+							</li>
+							<li>
 								<TextControl
 									label='Text'
 									value={bttn.text}
@@ -80,11 +109,12 @@ export default function Edit({ attributes, setAttributes }) {
 									}
 								/>
 							</li>
+
 							<li>
 								<TextControl
 									label='Button link'
 									help='Enter some text'
-									value={bttn.link}
+									value={bttn?.link}
 									onChange={(val) =>
 										setAttributes({
 											bttn: { ...bttn, link: val },

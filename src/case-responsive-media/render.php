@@ -28,6 +28,11 @@ $id = uniqid();
     }
 </style>
 <section id="case-responsive-media" <?= get_block_wrapper_attributes(); ?>>
+    <div class="relative">
+        <?php get_template_part('partials/caro', 'anchor', array(
+            'id' => $attributes['anchor'],
+        )); ?>
+    </div>
     <?php if (!empty($attributes['title'])) : ?>
         <h2 class="font-raleway text-white text-[4.8rem] md:text-[10rem] font-bold tracking-[-0.04em] pb-[2.4rem] text-center pt-[6.4rem] md:pt-[12.8rem]"><?= $attributes['title'] ?></h2>
     <?php endif; ?>

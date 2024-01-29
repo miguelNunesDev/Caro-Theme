@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ink-components/case-typography",
+  "version": "0.1.0",
+  "title": "Case typography",
+  "category": "design",
+  "icon": "smiley",
+  "description": "Example block scaffolded with Create Block tool.",
+  "example": {},
+  "supports": {
+    "html": true
+  },
+  "attributes": {
+    "colors": {
+      "type": "array",
+      "default": []
+    },
+    "image": {
+      "type": "object",
+      "default": {}
+    },
+    "anchor": {
+      "type": "string",
+      "default": "#"
+    }
+  },
+  "textdomain": "case-typography",
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}
