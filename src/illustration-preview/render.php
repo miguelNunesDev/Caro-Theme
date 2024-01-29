@@ -18,12 +18,15 @@
         .home #fun-projects {
             margin-bottom: 14.6rem;
         }
-        #illustration-preview aside img:first-of-type{
+        .case-studies #illustration-preview article {
+            background: none;
+        }
+        #illustration-preview aside figure:first-child img{
             object-position: bottom;
         }
     }
 </style>
-<section id="ilustration-preview" class="w-full mx-auto relative z-[1]" <?= get_block_wrapper_attributes(); ?> id="fun-projects">
+<section id="illustration-preview" class="w-full mx-auto relative z-[1]" <?= get_block_wrapper_attributes(); ?> id="fun-projects">
     <?php get_template_part('partials/caro', 'anchor', array(
         'id' => 'fun-projects',
     )); ?>

@@ -6,8 +6,21 @@
     #case-aside-text-title ul li {
         margin-left: 2.3rem;
         font-size: 1.6rem;
-        line-height: 1.2em;
+        line-height: 1.38em;
     }
+    @media only screen and (min-width : 961px) {
+        #case-aside-text-title ul li {
+            font-size: 1.8rem;
+        }
+    }
+
+    @media only screen and (min-width : 961px) and (max-width : 1440px) {}
+
+    @media only screen and (min-width : 0) and (max-width : 960px) {}
+
+    /* @end */
+
+   
 </style>
 
 <section id="case-aside-text-title" class="text-white mx-auto flex flex-wrap md:py-[12.8rem] container-block md:px-[8.333%] px-[3.2rem] py-[6.4rem] items-center relative" <?= get_block_wrapper_attributes(); ?>>

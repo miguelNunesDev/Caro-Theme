@@ -2,9 +2,7 @@ class CaseBanner {
 	constructor(sel) {
 		// view
 		this.component = document.querySelector(sel);
-		this.menu = document.querySelector('#case-banner-menu');
-		this.toggleMenu = this.menu ? this.menu.querySelector('header') : false;
-		this.toggleBttn = this.menu ? this.menu.querySelector('button') : false;
+		this.menus = document.querySelectorAll('#case-banner-menu');
 
 		if (this.component) {
 			this.init();
@@ -12,12 +10,17 @@ class CaseBanner {
 	}
 
 	init() {
-		if (this.menu)
-			[this.toggleMenu, this.toggleBttn].forEach((toggle) =>
-				toggle.addEventListener('click', () => {
-					this.menu.classList.toggle('open');
-				})
-			);
+		if (this.menus)
+			this.menus.forEach((menu) => {
+				[
+					menu.querySelector('header'),
+					menu.querySelector('button'),
+				].forEach((toggle) =>
+					toggle.addEventListener('click', () => {
+						menu.classList.toggle('open');
+					})
+				);
+			});
 	}
 }
 window.caseBanner = new CaseBanner('#case-banner');

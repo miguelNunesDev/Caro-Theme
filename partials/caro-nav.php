@@ -43,6 +43,7 @@
         }
         #caro-nav.open {
             top: 0 !important;
+            z-index: 110;
         }
         #caro-nav {
             position: fixed;
@@ -63,7 +64,7 @@
                 )); ?>
             </li>
         <?php endforeach; ?>
-        <li class="max-lg:absolute max-lg:bottom-[3.2rem] max-lg:inset-x-[3.2rem]">
+        <li class="max-lg:absolute max-lg:bottom-[6.2rem] max-lg:inset-x-[3.2rem]">
             <?php get_template_part('partials/caro', 'bttn', array(
                 'text' => 'CV/Resume',
                 'text-mobile' => 'Download CV/Resume',

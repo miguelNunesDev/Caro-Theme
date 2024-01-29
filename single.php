@@ -100,6 +100,13 @@ endif;
     var relatedSwiper = new Swiper('#related-case-studies .swiper', {
         slidesPerView: 1,
         spaceBetween: 0,
+        centeredSlides: true,
+        centeredSlidesBounds: true,
+        // centerInsufficientSlides: true,
+        // freeMode: {
+        //     enabled: true,
+        //     sticky: true
+        // },
         loop: true,
         breakpoints: {
             768: {

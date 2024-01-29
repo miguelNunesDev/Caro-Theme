@@ -1,5 +1,5 @@
 <?php
-$media_css = 'absolute inset-0 transition-opacity w-full h-full object-cover';
+$media_css = 'transition-opacity w-full h-full object-cover';
 $id = uniqid();
 ?>
 <style>

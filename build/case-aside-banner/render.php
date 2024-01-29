@@ -74,7 +74,7 @@ $id = uniqid();
                 overlay.querySelector('.wrapper').classList.toggle('opacity-0', !state);
                 setTimeout(() => {
                     overlay.classList.toggle('hidden', !state);
-                }, 5000)
+                }, 500)
             }
 
         }
