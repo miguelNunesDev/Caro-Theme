@@ -1,41 +1,27 @@
 <style>
-    .reverse header {
-        order: 1;
-    }
-
-
-    .reverse aside {
-        top: 15rem;
-    }
-
-    .reverse aside {
-        padding-top: 40rem;
-    }
-
-    @media only screen and (min-width : 0) and (max-width : 960px) {
-        #testimonies header {
-            order: -1;
-        }
-    }
-
-    @media only screen and (min-width : 961px) {}
 </style>
 <div <?= get_block_wrapper_attributes(); ?>>
-    <section id="case-slider" class="container-block px-[8.33%] mx-auto">
-        <div class="relative px-[2rem]">
-            <article class="swiper">
-                <div class="swiper-wrapper">
-                    <?php
-                    foreach ($attributes['imgs'] as $img) : ?>
-                        <figure class="img-box swiper-slide">
-                            <img src="<?= $img ?>" alt="">
-                        </figure>
-                    <?php endforeach; ?>
-                </div>
-
-            </article>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+    <section id="case-typography" class="relative">
+        <div class="flex max-md:flex-col">
+            <aside class="flex flex-col md:basis-3/12 max-md:w-full">
+                <?php foreach ($attributes['colors'] as $color) : ?>
+                    <div class="h-[8.7rem] lg:h-[23.4rem] lg:flex-grow flex items-center justify-center" style="background: <?= $color['text'] ?>;">
+                    <p class="font-raleway text-[3.3rem] tracking-[-0.12em] leading-[1.2em] font-extralight" style="color: <?= $color['isDark'] ? 'white' : 'black' ?>;">
+                        
+                        <?= $color['text'] ?>
+                    </p>
+                    </div>
+                <?php endforeach; ?>
+            </aside>
+            <picture class="h-full img-box basis-9/12">
+                <?php if ($attributes['desktop']) : ?>
+                    <source media="(min-width: 768px)" srcset="<?= $attributes['desktop']['src'] ?>">
+                <?php endif; ?>
+                <?php if ($attributes['mobile']) : ?>
+                    <source media="(max-width: 768px)" srcset="<?= $attributes['mobile']['src'] ?>">
+                <?php endif; ?>
+                <img src="<?= isset($attributes['mobile']['src']) ? $attributes['mobile']['src'] : $attributes['desktop']['src'] ?>" alt="" />
+            </picture>
         </div>
 
     </section>
@@ -43,18 +29,4 @@
 
 
 <script>
-    var testimonialSwiper = new Swiper('#case-slider .swiper', {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        loop: true,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 4,
-            }
-        }
-    });
 </script>

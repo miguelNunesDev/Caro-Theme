@@ -10,7 +10,7 @@
         <img class="" src="<?= $attributes['img']['src'] ?>" alt="">
     </aside>
     <article class="text-white md:basis-1/2 font-raleway">
-        <h3 class="font-raleway pr-[2rem] md:pr-0 text-[4.8rem] md:text-[7.2rem] text-white font-bold tracking-[-0.04em]"><?= $attributes['title'] ?></h3>
+        <h3 class="font-raleway pr-[2rem] md:pr-0 text-[4.8rem] md:text-[7.2rem] text-white font-bold tracking-[-0.04em] leading-[1.11em]"><?= $attributes['title'] ?></h3>
         <p class="text-content pt-[2.4rem] md:pr-[8.333%]"><?= $attributes['content'] ?>
         </p>
     </article>

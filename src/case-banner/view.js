@@ -12,14 +12,10 @@ class CaseBanner {
 	init() {
 		if (this.menus)
 			this.menus.forEach((menu) => {
-				[
-					menu.querySelector('header'),
-					menu.querySelector('button'),
-				].forEach((toggle) =>
-					toggle.addEventListener('click', () => {
-						menu.classList.toggle('open');
-					})
-				);
+				menu.addEventListener('click', () => {
+                    console.log('toggle');
+					menu.classList.toggle('open');
+				});
 			});
 	}
 }

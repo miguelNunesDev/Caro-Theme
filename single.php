@@ -21,6 +21,17 @@ if ($related_query->have_posts()) : ?>
         #related-case-studies .swiper-slide {
             height: auto;
         }
+
+        @media only screen and (min-width : 0) and (max-width : 960px) {
+            #related-case-studies .swiper-slide {
+                width: 90vw !important;
+            }
+        }
+        @media only screen and (min-width: 961px) {
+            .swiper {
+                padding-left: 8.3%;
+            }
+        }
     </style>
     <section id="related-case-studies" class="relative block-container py-[12.8rem]">
         <aside class="absolute w-full inset-inline-0 z-[-1] top-[-10rem]">
@@ -35,10 +46,10 @@ if ($related_query->have_posts()) : ?>
             </svg>
             <div class="absolute inset-0 backdrop-blur-3xl"></div>
         </aside>
-        <header class="pl-[8.3%] pb-[6.6rem]">
-            <h2 class="text-white text-raleway text-[7.2rem] font-semibold tracking-[-0.04em] leading-[1.11em]">.Browse other case studies</h2>
+        <header class="pl-[8.3%] pb-[6.6rem] max-md:max-w-[85vw]]">
+            <h2 class="text-white text-raleway text-[4.8rem] md:text-[7.2rem] font-semibold tracking-[-0.04em] leading-[1.11em]">.Browse other case studies</h2>
         </header>
-        <div class="swiper" style="padding-inline: 8.3%;">
+        <div class="swiper">
             <div class="swiper-wrapper">
                 <?php
                 $card = "flex flex-col overflow-hidden rounded-[1.2rem] border border-[#535150] h-full justify-between";
@@ -47,7 +58,7 @@ if ($related_query->have_posts()) : ?>
                     $related_query->the_post();
                     $divide = strlen(get_post_meta(get_the_ID(), 'case_title', true)) < 20 ? 'columns-2' : '';
                 ?>
-                    <article class="img-box swiper-slide px-[.8rem] md:max-w-none max-w-[64vw] comp-<?= get_post_field('post_name', get_the_ID()) ?>">
+                    <article class="max-md:first:pl-[8.3%] img-box swiper-slide px-[.8rem] comp-<?= get_post_field('post_name', get_the_ID()) ?>">
                         <div class="<?= $card ?>" style="<?= $gradient ?>">
 
                             <header class="pt-[6.4rem] px-[3.2rem] md:px-[6.4rem]">
@@ -58,7 +69,7 @@ if ($related_query->have_posts()) : ?>
                                 <p class="pt-[.8rem] text-[#D2D1D0] text-real-text text-[1.8rem] leading-[1.2em] font-normal"><?= get_the_title(); ?></p>
                             </header>
 
-                            <div class=" py-[2.4rem] md:pt-[2.4rem] md:pb-[4.4rem] px-[2rem] md:px-[6.4rem] max-md:items-center max-md:justify-between flex md:flex-wrap gap-0 md:gap-[2.4rem]">
+                            <div class=" py-[2.4rem] md:pt-[2.4rem] md:pb-[4.4rem] px-[3.2rem] md:px-[6.4rem] max-md:items-center <?= get_post_field('post_name', get_the_ID()) == 'flix-website' ? 'max-md:justify-start' : 'max-md:justify-between' ?> flex md:flex-wrap gap-0 md:gap-[2.4rem]">
                                 <?php get_template_part('partials/caro', 'bttn', array(
                                     'text' => 'Take a peek',
                                     'link' => get_permalink(),
@@ -100,14 +111,11 @@ endif;
     var relatedSwiper = new Swiper('#related-case-studies .swiper', {
         slidesPerView: 1,
         spaceBetween: 0,
-        centeredSlides: true,
-        centeredSlidesBounds: true,
-        // centerInsufficientSlides: true,
-        // freeMode: {
-        //     enabled: true,
-        //     sticky: true
-        // },
-        loop: true,
+        freeMode: {
+            enabled: true,
+            // sticky: true
+        },
+        loop: false,
         breakpoints: {
             768: {
                 slidesPerView: 3,

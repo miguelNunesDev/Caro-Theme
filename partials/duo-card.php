@@ -25,7 +25,7 @@ $gradient = "background: linear-gradient(74deg, rgba(34, 30, 30, 0.50) 21.29%, r
         <ul class="flex flex-col gap-[.4rem]">
             <?php foreach ($args['data']['details'] as $detail) : ?>
                 <li class="font-open-sans  leading-[1.21em] ">
-                    <strong class="font-regular text-[1.8rem] leading-[1.16em]"><?= $detail['title'] ?></strong>
+                    <strong class="font-semibold text-[1.8rem] leading-[1.16em]"><?= $detail['title'] ?></strong>
                     <span class="pl-[.15rem] text-[1.4rem] font-light leading-[1.21em]"> <?= $detail['content'] ?></span>
                 </li>
             <?php endforeach; ?>

@@ -10,12 +10,12 @@
     $menu_sm = 'group 
     transition-[left] duration-700
     max-lg:group-[.open]:left-0 max-lg:left-[100%]
-    max-lg:fixed  max-lg:top-0 max-lg:h-[100vh] max-lg:w-[100vw]   
+    max-lg:fixed  max-lg:top-0 max-lg:h-[100vh] max-lg:h-[100svh]  max-lg:w-[100vw]   
     max-lg:bg-[#2C2829]
     max-lg:flex-col max-lg:justify-center';
 
     $menu_lg = 'relative items-center list-none
-    flex flex-wrap gap-[2.4rem] 
+    flex flex-wrap md:gap-[2.4rem] 
     text-white
     px-[3.2rem]
     
@@ -56,11 +56,11 @@
     </style>
     <nav class="<?= $menu_sm . ' ' . $menu_lg ?>" id="nav-menu">
         <?php foreach ($menuItems as $item) : ?>
-            <li class="transition max-lg:border-t max-lg:w-full max-lg:group-first/border-t-0 max-lg:text-center max-lg:border-t-white">
+            <li class="transition max-lg:border-t max-lg:w-full max-lg:first:border-t-0 max-lg:text-center max-lg:border-t-white max-lg:py-[2.4rem]">
                 <?php get_template_part('partials/caro', 'bttn', array(
                     'text' => $item->title,
                     'link' => $item->url,
-                    'class' => 'bttn hover:text-primary max-lg:text-[3.3rem] tracking-[-0.02em] block'
+                    'class' => 'bttn hover:text-primary max-lg:text-[3.3rem] tracking-[-0.02em] block max-lg:font-normal'
                 )); ?>
             </li>
         <?php endforeach; ?>
@@ -69,7 +69,7 @@
                 'text' => 'CV/Resume',
                 'text-mobile' => 'Download CV/Resume',
                 'link' => wp_get_attachment_url($pdf_id),
-                'class' => 'bttn-line max-lg:block max-lg:text-center text-[1.8rem]',
+                'class' => 'bttn-line max-lg:block max-lg:text-center max-md:text-[1.8rem] max-md:py-[2.4rem]',
                 'target' => '_blank',
                 'download' => 'Carolina_di_Lello_Resume_2023'
             )); ?>

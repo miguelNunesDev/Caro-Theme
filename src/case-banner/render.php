@@ -11,8 +11,7 @@ $media_css = 'absolute inset-0 transition-opacity w-full h-full object-cover';
         top: 0;
     }
 
-    .scroll-top #case-banner-menu.floater,
-    body:not(.scroll-top) #case-banner-menu.static {
+    .scroll-top #case-banner-menu.floater{
         opacity: 0;
     }
 
@@ -57,7 +56,7 @@ $media_css = 'absolute inset-0 transition-opacity w-full h-full object-cover';
                     'text-color' => 'text-[#2A2928]'
                 )); ?>
                 <h2 class="font-raleway pt-[2.4rem] md:pt-[2.4rem] text-white font-bold text-[4.2rem] md:text-[5.8rem] leading-[1.2em] tracking-[-0.04em]"><?= get_post_meta(get_the_ID(), 'case_title', true) ?></h2>
-                <small class="font-semibold text-[3.2rem] md:text-[4.8rem] tracking-[-0.04em] leading-[1.16em] "><?= get_the_title() ?></small>
+                <small class="font-normal text-[3.2rem] md:text-[4.8rem] tracking-[-0.04em] leading-[1.16em] "><?= get_the_title() ?></small>
                 <ul class="flex flex-wrap gap-[1.2rem] md:gap-[1.75rem] pt-[2.5rem]">
                     <?php foreach ($attributes['tools'] as $icon) : ?>
                         <li>

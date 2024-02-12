@@ -14,9 +14,9 @@ $b = "text-open-sans text-[1.6rem] font-bold leading-[1.18em]";
                 <h2 class="font-bold text-raleway text-[4.8rem] md:text-[7.2rem] leading-[1.11em] tracking-[-0.04em]"><?= $attributes['title'] ?></h2>
             </header>
             <article class="flex flex-wrap gap-x-[1.6rem] md:basis-6/12">
-                <!-- Desktop Tools When Base in -->
-                <div class="hidden basis-1/2 md:block">
-                    <div>
+                <div class="flex-wrap hidden md:flex">
+                    <div class="basis-1/2">
+                        <!-- Desktop Tools -->
                         <h3 class="<?= $h3 ?>">Tools</h3>
                         <ul class="flex flex-wrap pt-[1.6rem] gap-[1.3rem]">
                             <?php foreach ($attributes['tools'] as $tool) : ?>
@@ -24,7 +24,25 @@ $b = "text-open-sans text-[1.6rem] font-bold leading-[1.18em]";
                             <?php endforeach; ?>
                         </ul>
                     </div>
-                    <div class="mt-[5.2rem]">
+                    <!-- Desktop Skills -->
+                    <div class="basis-1/2">
+                        <h3 class="<?= $h3 ?>">Skills</h3>
+                        <ul class="pt-[2.4rem] flex flex-wrap gap-[.8rem]">
+                            <?php foreach ($attributes['skills'] as $skill) : ?>
+                                <li><?php get_template_part('partials/caro', 'pill', array(
+                                        'text' => $skill,
+                                        'class' => 'block'
+                                    )); ?>
+
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- Desktop When Base in -->
+                <div class="hidden basis-1/2 md:block">
+                    <div class="mt-[4.2rem]">
                         <h3 class="<?= $h3 ?>">When</h3>
                         <p class="pt-[1.6rem] <?= $p ?>"><?= $attributes['when'] ?></p>
                     </div>
@@ -34,9 +52,9 @@ $b = "text-open-sans text-[1.6rem] font-bold leading-[1.18em]";
                     </div>
                 </div>
 
-                <div class="flex flex-wrap md:block md:basis-1/2 md:ml-[-1.6rem]">
+                <div class="flex flex-wrap md:hidden md:basis-1/2 md:ml-[-1.6rem]">
                     <!-- Skills -->
-                    <div class="max-md:basis-1/2">
+                    <div class="">
                         <h3 class="<?= $h3 ?>">Skills</h3>
                         <ul class="pt-[2.4rem] flex flex-wrap gap-[.8rem]">
                             <?php foreach ($attributes['skills'] as $skill) : ?>
@@ -50,7 +68,7 @@ $b = "text-open-sans text-[1.6rem] font-bold leading-[1.18em]";
                         </ul>
                     </div>
                     <!-- MOBILE Tools -->
-                    <div class="md:hidden basis-1/2">
+                    <div class="md:hidden max-md:mt-[5.2rem]">
                         <h3 class="<?= $h3 ?>">Tools</h3>
                         <ul class="flex flex-wrap pt-[1.6rem] gap-[1.3rem]">
                             <?php foreach ($attributes['tools'] as $tool) : ?>
@@ -71,7 +89,7 @@ $b = "text-open-sans text-[1.6rem] font-bold leading-[1.18em]";
 
                     <!-- Links -->
                     <div class="w-full pt-[5.2rem]">
-                        <?php if ( $attributes['links'] && !empty($attributes['links'])) : ?>
+                        <?php if ($attributes['links'] && !empty($attributes['links'])) : ?>
                             <h3 class="<?= $h3 ?>">Links</h3>
                             <ul class="flex flex-wrap pt-[1.6rem] gap-[1.3rem]">
                                 <?php foreach ($attributes['links'] as $link) : ?>
@@ -84,7 +102,7 @@ $b = "text-open-sans text-[1.6rem] font-bold leading-[1.18em]";
                         <?php endif; ?>
                     </div>
                 </div>
-                <div class="w-full pt-[5.2rem]">
+                <div class="w-full pt-[5.2rem] md:pt-[4.2rem]">
                     <h3 class="<?= $h3 ?>">Team</h3>
                     <ul class="flex flex-wrap pt-[1.6rem] gap-[1.3rem]">
                         <?php foreach ($attributes['team'] as $person) : ?>

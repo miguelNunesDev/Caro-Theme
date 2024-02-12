@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&family=Raleway:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;600;800&family=Raleway:wght@200;300;400;500;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -14,7 +14,7 @@
 }
 @layer components {
 	.bttn {
-		@apply text-[1.4rem] leading-[1.21em] font-raleway font-normal rounded-[.8rem] transition px-[1.8rem] py-[1.2rem] duration-300;
+		@apply text-[1.4rem] leading-[1.21em] font-real-text font-extralight rounded-[.8rem] transition px-[1.8rem] py-[1.2rem] duration-300;
 	}
 	.bttn-fill {
 		@apply text-white bg-primary;

@@ -16,7 +16,11 @@
 			"type": "array",
 			"default": []
 		},
-		"image": {
+		"desktop": {
+			"type": "object",
+			"default": {}
+		},
+        "mobile": {
 			"type": "object",
 			"default": {}
 		},
